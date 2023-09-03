@@ -1,0 +1,613 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+
+}
+
+header > h1 {
+    align-self: center;
+}
+
+nav {
+    align-self: center;
+    text-align: center;
+}
+
+.nav-list {
+    list-style: none;
+    width: fit-content;
+}
+
+.nav-list > li {
+    float: left;
+    padding-right: 10px;
+}
+
+.nav-btn{
+    padding: .5em;
+    font-size: 1.5em;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    transition: 1.5s;
+    cursor: pointer;
+}
+
+.nav-btn:hover{
+    background-color: goldenrod;
+}
+
+.signup {
+    background-color: purple;
+    color: #fff;
+}
+
+.main {
+    background-color: #a4de3a;
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding: 2em;
+    display: flex;
+}
+
+
+.main-left,
+.main-right{
+    width: 50%;
+    padding: 2em;
+    align-self: center;
+}
+
+.main-left > h1 {
+    font-size: 3.5em;
+    padding: 0;
+    margin: 0;
+}
+
+.main-left > p {
+    font-size: 1.5em;
+}
+
+.main-img {
+    width: 90%;
+    height: 100%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+.main-left-signup-btn,
+.syllabus-content-signup-btn {
+    padding: .5em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    background-color: purple;
+    color: white;
+}
+
+.main-left-signup-btn:hover,
+.syllabus-content-signup-btn:hover{
+    background-color: goldenrod;
+}
+
+.main-left-play-btn{
+    background-color: transparent;
+    font-size: .8em;
+    border: none;
+    cursor: pointer;
+}
+
+.main-left-play-btn:hover{
+    color: grey;
+}
+
+.endorsement{
+    width: 100%;
+    height: auto;
+    background-color: black;
+    color: white;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.endorsement-logos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+}
+
+.endorsement-logos > img {
+    height: 100px;
+    width: fit-content;
+}
+
+.syllabus{
+    display: flex;
+    justify-content: flex-end;
+    padding: 2em;
+    width: 100%;
+}
+
+.syllabus-img{
+    width: 80%;
+    align-items: center;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+
+.syllabus-img > img{
+    width: 70%;
+    height: 100%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    object-fit: cover;
+}
+
+.syllabus-content{
+    display: block;
+    align-items: center;
+} 
+
+.syllabus-content > h1{
+    font-size: 3.8em;
+    padding: 0;
+    margin: 0;
+    width: 80%;
+}
+
+.syllabus-content > p {
+    font-size: 1.5em;
+    width: 80%;
+}
+
+.syllabus-content > ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(33.33% - 10px), 1fr));
+    gap: 1em;
+    padding: 0;
+}
+
+.syllabus-content > ul > li {
+    /* display: flex; */
+    font-size: 1.5em;
+    font-style: bold;
+    font-weight: bold;
+    list-style: url('image/bullet.png');
+    list-style-type: armenian;
+    align-items: center;
+} 
+
+.syllabus-content-signup-btn {
+    margin-top: 1em;
+    font-size: 1.5em;
+    border-radius: 15px;
+}
+
+.modules{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mod-head{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.modules-head{
+    font-size: 4em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.modules-subhead{
+    font-size: 1.5em;
+    margin: 0;
+    text-align: center;
+}
+
+.mod-card-container{
+    margin-top: 2em;
+    display: grid;
+    padding: 1.5em;
+    width: 70%;
+    gap: 1.5em;
+    grid-template-columns: repeat(auto-fill, minmax(calc(25% - 10px), 1fr));
+    justify-items: center;
+    align-items: center;
+}
+
+.mod-card{
+    height: 100% ;
+    padding: 2.4em;
+}
+
+.selected {
+    background-color: #a4de3a;
+    border-radius: 15px;
+}
+
+.pricing{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #9b51e0;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing-title{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 1.5em;
+}
+
+.pricing-title > h1,
+.pricing-title > p {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.pricing-title > h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.price-card-container{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    gap: .5em;
+    justify-content: space-evenly;
+}
+
+.price-card{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    height: fit-content;
+    padding: 1em;
+    border-radius: 15px;
+    margin-bottom: 2.5em;
+}
+
+.price-card--price > h1,
+.price-card--price > p{
+    margin: 0;
+    padding: 0;
+}
+
+.price-card--price > h1 {
+    font-size: 1.9em;
+    font-weight: bolder;
+}
+
+.price-card--price > p {
+    font-size: .8em;
+    margin-bottom: .8em;
+}
+
+.price-card > button {
+    padding: .5em;
+    border-radius: 10px;
+    background-color: #a4de3a;
+    border: none;
+}
+
+.price-card--list > li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    align-items: center;
+}
+
+.price-card--list >li::before{
+    content: "✔";
+    position: absolute;
+    font-size: .8em;
+    left: -20px;
+    color: purple;
+}
+
+.our-reviews{
+    margin-top: 2em;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.review-title > h1,
+.review-title > p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.review-title > h1 {
+    font-size: 3em;
+    font-weight: bolder;
+}
+
+.review-cards-container {
+    margin-top: 2em;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.review-cards-container >div:nth-child(1){
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+}
+
+.review-cards-container >div:nth-child(2){
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 15px;
+}
+
+.big{
+    background-color: #a4de3a;
+    border-radius: 20px;
+    padding: 2em;
+}
+  
+.small{
+    border: 2px solid #a4de3a;
+    border-radius: 20px;
+    padding: 2em;
+}
+
+.big > .star{
+    color: #fff;
+}
+
+.small > .star {
+    color: #9b51e0;
+}
+
+.form-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9b51e0;
+    margin-top: 5em;
+    width: 100%;
+    height: auto;
+}
+
+.form-content > h1{
+    font-size: 2.5em;
+    margin: 0;
+    padding: 0;
+}
+
+.form-content > p{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1.5em;
+}
+
+.form-section-left,
+.form-section-right {
+    padding: 2em;
+}
+
+.form-section-left{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section-right > img {
+    height: 20em;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border: 2px solid black;
+} 
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: .5em;
+    font-size: 16px;
+    min-height: 47px;
+    border-radius: 40%;
+}
+
+.form-name{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    padding: 1em;
+    border-radius: 10px;
+    border: none;
+}
+
+textarea{
+    height: 100px;
+    border-radius: 10px;
+    padding: 1.5em;
+    border: none;
+    resize: none;
+}
+
+input:focus,
+textarea:focus,
+input:active,
+textarea:active {
+  outline: none;
+}
+
+.form-content > * {
+    color: #fff;
+}
+
+.hamburger-menu{
+    align-items: center;
+    align-self: center;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+
+@media (max-width: 1045px) {
+
+
+    .endorsement-logos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav{
+        display: none;
+    }
+    
+    .hamburger-menu {
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        margin: 20px;
+    }
+    
+    
+    .hamburger-menu {
+        display: block;
+    }
+    
+    .menu-toggle {
+        display: none;
+    }
+    
+    .menu-icon {
+        cursor: pointer;
+        display: block;
+        padding: 10px;
+        background-color: #333;
+        border-radius: 5px;
+    }
+    
+    .menu-icon span {
+        display: block;
+        width: 30px;
+        height: 4px;
+        background-color: #fff;
+        margin: 5px auto;
+        transition: 0.4s;
+    }
+    
+    /* Show the navigation when the checkbox is checked */
+    #menu-toggle:checked + .menu-icon span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    #menu-toggle:checked + .menu-icon span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    #menu-toggle:checked + .menu-icon span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .menu-toggle:checked + .menu-icon + nav {
+        display: block;
+    }
+    
+    .nav-list {
+        list-style: none;
+    }
+    
+    .nav-btn {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        margin: 5px 0;
+        cursor: pointer;
+    }
+    
+    .signup {
+        background-color: purple;
+    }
+    
+    .mod-card-container{
+        grid-template-columns: repeat(auto-fill, minmax(calc(40% - 10px), 1fr));
+    }
+
+    body{
+        max-width: fit-content;
+    }
+
+    .main,
+    .syllabus,
+    .form-section{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .syllabus-content{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .syllabus-content > h1,
+    .syllabus-content > p {
+        text-align: center;
+    }
+
+    .syllabus-content > ul {
+        width: 100%;
+        font-size: 1.2em;
+        align-items: center;
+        justify-content: space-between;
+        justify-items: center;
+    }
+
+    .form-names {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        margin-bottom: 0;
+    }
+}
